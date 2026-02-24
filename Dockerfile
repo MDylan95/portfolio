@@ -1,5 +1,5 @@
-# Étape 1 : Builder avec Composer
-FROM composer:2.6 as builder
+# Étape 1 : Builder avec Composer (PHP 8.4)
+FROM composer:2.6-php8.4 as builder
 
 WORKDIR /app
 
@@ -8,7 +8,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 
 # Étape 2 : Application finale
-FROM php:8.2-apache
+FROM php:8.4-apache
 
 # Installer les dépendances système
 RUN apt-get update && apt-get install -y \
