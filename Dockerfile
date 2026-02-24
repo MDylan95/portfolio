@@ -1,12 +1,19 @@
+# Étape 1 : Builder avec Composer
+FROM composer:2.6 as builder
+
+WORKDIR /app
+
+COPY composer.json composer.lock ./
+
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-scripts
+
+# Étape 2 : Application finale
 FROM php:8.2-apache
 
 # Installer les dépendances système
 RUN apt-get update && apt-get install -y \
-    git \
-    curl \
     libpq-dev \
     libzip-dev \
-    unzip \
     && docker-php-ext-install \
     pdo \
     pdo_pgsql \
@@ -14,19 +21,12 @@ RUN apt-get update && apt-get install -y \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
 
-# Installer Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-# Définir le répertoire de travail
 WORKDIR /var/www/html
 
-# Copier composer.json et composer.lock
-COPY composer.json composer.lock ./
+# Copier les dépendances depuis le builder
+COPY --from=builder /app/vendor ./vendor
 
-# Installer les dépendances PHP
-RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
-
-# Copier le reste des fichiers du projet
+# Copier le reste du projet
 COPY . .
 
 # Configurer Apache pour Laravel
@@ -44,8 +44,6 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 # Définir les permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Exposer le port 80
 EXPOSE 80
 
-# Commande de démarrage
 CMD ["apache2-foreground"]
