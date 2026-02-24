@@ -1,23 +1,33 @@
 FROM php:8.2-apache
 
-# Installer les extensions PHP nécessaires
+# Installer les dépendances système
 RUN apt-get update && apt-get install -y \
+    git \
+    curl \
     libpq-dev \
-    && docker-php-ext-install pdo pdo_pgsql \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-install \
+    pdo \
+    pdo_pgsql \
+    zip \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
+
+# Installer Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Définir le répertoire de travail
 WORKDIR /var/www/html
 
-# Copier les fichiers du projet
-COPY . .
-
-# Installer Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# Copier composer.json et composer.lock
+COPY composer.json composer.lock ./
 
 # Installer les dépendances PHP
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+
+# Copier le reste des fichiers du projet
+COPY . .
 
 # Configurer Apache pour Laravel
 RUN echo '<Directory /var/www/html/public>\n\
@@ -30,6 +40,9 @@ RUN echo '<Directory /var/www/html/public>\n\
 # Définir le DocumentRoot
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+
+# Définir les permissions
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Exposer le port 80
 EXPOSE 80
