@@ -1,7 +1,11 @@
-# Étape 1 : Builder avec Composer (PHP 8.4)
-FROM composer:2.6-php8.4 as builder
+# Étape 1 : Builder avec PHP 8.4 + Composer
+FROM php:8.4-cli as builder
 
 WORKDIR /app
+
+RUN apt-get update && apt-get install -y git unzip zip && rm -rf /var/lib/apt/lists/*
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 COPY composer.json composer.lock ./
 
