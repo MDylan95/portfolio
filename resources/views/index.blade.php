@@ -7,7 +7,8 @@
   <div class="hero-text">
     <p class="hero-subtitle">Bonjour, je suis</p>
     <h1>Bokame Mac-Dylan KACOU</h1>
-    <p class="hero-role">Web &amp; Mobile Developer | Transitioning to DevOps & Automation · 2e Année Master Base de Données &amp; Génie Logiciel</p>
+    <p class="hero-role">Web &amp; Mobile Developer | Transitioning to DevOps & Automation · En Master 2, Spécialité Base de Données &amp; Génie Logiciel</p>
+    <p class="hero-role"></p>
     <div class="hero-btns">
       <a href="{{ route('projets') }}" class="btn btn-primary">Voir mes projets</a>
       <a href="{{ asset('cv/cv-macdylan-kacou.pdf') }}" class="btn btn-outline" download>
