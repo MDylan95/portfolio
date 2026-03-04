@@ -15,7 +15,8 @@
 
     <div class="contact-info">
       <h2>Travaillons ensemble</h2>
-      <p>Je suis disponible pour alternances ou opportunités en développement web et mobile. N'hésitez pas à me contacter.</p>
+      <p>Entreprise ou porteur de projet, vous cherchez un profil pour renforcer votre équipe ou externaliser une partie de votre développement&nbsp;?</p>
+      <p>Que ce soit en freelance ou sous contrat, je vous accompagne de la phase d'étude jusqu’à la mise en production. Mon objectif : transformer vos besoins techniques en solutions fonctionnelles et performantes.</p>
 
       <div class="contact-items">
         <div class="contact-item">

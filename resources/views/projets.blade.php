@@ -11,7 +11,7 @@
 </section>
 
 <section class="projets-section">
-  <p class="section-intro">Projets réels développés et déployés en production, réalisés dans le cadre de mes stages et missions professionnelles.</p>
+  <p class="section-intro">Projets réels développés et déployés en production, réalisés dans le cadre de mes stages et missions professionnelles. J'ai également contribué à des applications ambitieuses qui n'ont pas encore vu le jour, mais qui ont renforcé mon expertise technique et ma capacité d'adaptation.</p>
 
   <div class="projets-grid">
 

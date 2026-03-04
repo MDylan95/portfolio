@@ -21,10 +21,10 @@
       </div>
       <div class="menu-toggle"></div>
       <ul class="menu">
-        <li><a href="{{ route('accueil') }}" class="{{ request()->routeIs('accueil') ? 'active' : '' }}">Accueil</a></li>
-        <li><a href="{{ route('apropos') }}" class="{{ request()->routeIs('apropos') ? 'active' : '' }}">À propos</a></li>
-        <li><a href="{{ route('projets') }}" class="{{ request()->routeIs('projets') ? 'active' : '' }}">Projets</a></li>
-        <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
+        <li><a href="{{ route('accueil') }}" class="{{ request()->routeIs('accueil') ? 'active' : '' }}">Bienvenue</a></li>
+        <li><a href="{{ route('apropos') }}" class="{{ request()->routeIs('apropos') ? 'active' : '' }}">À propos de moi</a></li>
+        <li><a href="{{ route('projets') }}" class="{{ request()->routeIs('projets') ? 'active' : '' }}">Mes Projets</a></li>
+        <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Me Contacter</a></li>
       </ul>
     </header>
 

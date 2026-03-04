@@ -21,16 +21,13 @@
     <div class="apropos-content">
       <h2>Qui suis-je ?</h2>
       <p>
-        Développeur web et mobile dynamique et rigoureux, je suis Bokame Mac-Dylan KACOU,
-        étudiant, en fin de cycle, en Master 2 de Base de Données et Génie Logiciel à l'Université Félix
-        Houphouët-Boigny d'Abidjan. Titulaire d'une Licence en Informatique option
-        Informatique-Développeur d'Application, j'ai acquis une expérience concrète lors
-        de deux stages en entreprise où j'ai conçu et développé des fonctionnalités
-        front-end et back-end.
+        Actuellement en fin de cycle Master 2 Base de Données et Génie Logiciel à l’Université Félix Houphouët-Boigny, je consolide mon parcours en informatique par une spécialisation en architecture logicielle.
       </p>
       <p>
-        Polyvalent et doté d'une excellente aptitude à la communication, je cherche à
-        rejoindre une équipe dynamique pour contribuer à des projets à fort impact.
+        Mon expérience s'est forgée à travers deux stages en entreprise, où j'ai pu m'initier concrètement au développement de fonctionnalités Web et Mobile (Front-end et Back-end). Ces opportunités m'ont permis de comprendre les enjeux du travail en équipe et la rigueur nécessaire au déploiement de solutions fonctionnelles.
+      </p>
+      <p>
+        Passionné par l'efficience des systèmes, je m'oriente aujourd'hui vers le DevOps et l'Automation. Je cherche à intégrer une structure dynamique où je pourrai apporter mon soutien technique tout en continuant d'apprendre auprès de professionnels expérimentés.
       </p>
 
       <div class="info-grid">
@@ -38,8 +35,7 @@
         <div class="info-item"><i class="fas fa-birthday-cake"></i> Né le 15/04/2001</div>
         <div class="info-item"><i class="fas fa-envelope"></i> macdylankacou2000@gmail.com</div>
         <div class="info-item"><i class="fas fa-phone"></i> +225 07 59 14 14 20</div>
-        <div class="info-item"><i class="fas fa-graduation-cap"></i> Master 2— Base de Données et Génie Logiciel</div>
-        <div class="info-item"><i class="fas fa-flag"></i> Ivoirien</div>
+        <div class="info-item"><i class="fas fa-flag"></i> Ivoirienne</div>
       </div>
     </div>
   </div>
@@ -106,7 +102,7 @@
       <div class="timeline-dot"></div>
       <div class="timeline-content">
         <span class="timeline-date">Depuis sept. 2025</span>
-        <h4>Stagiaire Développeur Junior</h4>
+        <h4>Stagiaire Développeur Junior ➜ Web &amp; Mobile Developer (Transition DevOps)</h4>
         <p>Digital Côte d'Ivoire — Abidjan</p>
       </div>
     </div>
@@ -136,14 +132,7 @@
         <p>Université Internationale de Côte d'Ivoire — Abidjan, Cocody Angré 7e Tranche</p>
       </div>
     </div>
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <span class="timeline-date">2018 — 2019</span>
-        <h4>Baccalauréat Série D</h4>
-        <p>Lycée Moderne 2 d'Adzopé</p>
-      </div>
-    </div>
+     
   </div>
 </section>
 
