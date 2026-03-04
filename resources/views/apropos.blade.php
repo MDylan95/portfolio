@@ -6,7 +6,7 @@
 
 <section class="page-hero page-hero--apropos">
   <div class="page-hero__inner">
-    <p class="tittle-section" style="color:#fff;">À propos de moi</p>
+    <p class="tittle-section" style="color:#fff;">Mon Parcours & Expertise</p>
   </div>
 </section>
 
