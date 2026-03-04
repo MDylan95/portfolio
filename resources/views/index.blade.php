@@ -6,7 +6,7 @@
 <section id="hero">
   <div class="hero-text">
     <p class="hero-subtitle">Bonjour, je suis</p>
-    <h1>Bokame Mac-Dylan KACOU</h1>
+    <h1>Mac-Dylan KACOU</h1>
     <p class="hero-role">Web &amp; Mobile Developer | Transitioning to DevOps & Automation · Master 2, Base de Données &amp; Génie Logiciel</p>
     <p class="hero-role"></p>
     <div class="hero-btns">
